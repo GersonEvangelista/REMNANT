@@ -55,7 +55,7 @@
       transition: all 0.5s ease;
     }
     #navbar.scrolled {
-      background: rgba(13,13,11,0.97);
+      background: rgb(17,17,15);
       backdrop-filter: blur(16px);
       border-bottom: 1px solid var(--border);
       padding: 14px 0;
@@ -72,7 +72,14 @@
       letter-spacing: 0.25em;
       text-transform: uppercase;
       color: var(--cream);
+	  display: flex;
+	  align-items: center;
     }
+	.logo-img {
+	  max-height: 50px; /* Controla la altura del logo para que encaje perfecto en la barra */
+	  width: auto;
+	  object-fit: contain;
+	}	
     .nav-logo em {
       font-style: normal;
       color: var(--gold);
@@ -160,6 +167,7 @@
       margin-bottom: 28px;
       opacity: 0;
       animation: fadeUp 0.8s ease 0.2s forwards;
+	  margin-top: 100px;
     }
     .hero-label::before {
       content: '';
@@ -850,7 +858,9 @@
 <!-- NAVBAR -->
 <nav id="navbar">
   <div class="nav-inner">
-    <div class="nav-logo">REMNAN<em>T</em></div>
+    <div class="nav-logo">
+	  <img src="logo_vf.png" alt="Logo REMNANT" class="logo-img">
+	</div>
     <ul class="nav-links">
       <li><a href="#productos">Colección</a></li>
       <li><a href="#mision">Nosotros</a></li>
@@ -1135,10 +1145,10 @@
 <script>
   // 1. MODIFICA AQUÍ LAS RUTAS DE TUS IMÁGENES
   const products = [
-    { id:1, name:"No estas solo",    verse:"Efesios 2:8",      price:59.90, oldPrice:119.90, badge:"Más Vendido", image:"m1.png",    bg:"#1c1a12", accent:"#b8a678" },
-    { id:2, name:"La vida",          verse:"Hebreos 11:1",     price:69.90, oldPrice:119.90, badge:"Nuevo",       image:"m2.png",    bg:"#161620", accent:"#8aabcc" },
-    { id:3, name:"Paraiso",          verse:"Colosenses 3:23",  price:79.90, oldPrice:119.90, badge:null,          image:"m3.png",    bg:"#1c1510", accent:"#cc8844" },
-    { id:4, name:"El camino",        verse:"Mateo 6:33",       price:64.90, oldPrice:114.90, badge:"Edición 2026",image:"m4.png",    bg:"#1c1c10", accent:"#d4aa22" }
+    { id:1, name:"No estas solo",    verse:"Efesios 2:8",      price:59.90, oldPrice:119.90, badge:"Más Vendido", image:"a1.jpg",    bg:"#1c1a12", accent:"#b8a678" },
+    { id:2, name:"La vida",          verse:"Hebreos 11:1",     price:69.90, oldPrice:119.90, badge:"Nuevo",       image:"a2.jpg",    bg:"#161620", accent:"#8aabcc" },
+    { id:3, name:"Paraiso",          verse:"Colosenses 3:23",  price:79.90, oldPrice:119.90, badge:null,          image:"a3.jpg",    bg:"#1c1510", accent:"#cc8844" },
+    { id:4, name:"El camino",        verse:"Mateo 6:33",       price:64.90, oldPrice:114.90, badge:"Edición 2026",image:"a4.jpg",    bg:"#1c1c10", accent:"#d4aa22" }
   ];
 
   const grid = document.getElementById('products-grid');
